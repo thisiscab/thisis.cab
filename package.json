@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "npm run clean && webpack && python3 src/inject.py",
-    "clean": "rm -f *.html *.css"
+    "build": "npm run clean && npx webpack && python3 src/inject.py",
+    "clean": "rm -rf dist"
   },
   "keywords": [],
   "author": "",

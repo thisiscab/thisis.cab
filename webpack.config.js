@@ -36,6 +36,7 @@ module.exports = {
         },
         {
           from: path.resolve(__dirname, "src", "*.png"),
+          to: "[name][ext]",
         },
         {
           from: path.resolve(__dirname, "src", "robots.txt"),
@@ -118,6 +119,6 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, "dist"),
   },
 };
