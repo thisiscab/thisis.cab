@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <link rel="shortcut icon" href="favicon.ico">
     <script>
-    (function(){var s=localStorage,t=s.getItem("theme")||"dark",l=s.getItem("lang")||"fr";document.documentElement.lang=l;document.write('<style>[data-lang="fr"] .en,[data-lang="en"] .fr{display:none}</style>');document.addEventListener("DOMContentLoaded",function(){document.body.setAttribute("data-theme",t);document.body.setAttribute("data-lang",l)})})();
+    (function(){var s=localStorage,t=s.getItem("theme")||(window.matchMedia("(prefers-color-scheme:light)").matches?"light":"dark"),l=s.getItem("lang")||"fr";document.documentElement.lang=l;document.write('<style>[data-lang="fr"] .en,[data-lang="en"] .fr{display:none}</style>');document.addEventListener("DOMContentLoaded",function(){document.body.setAttribute("data-theme",t);document.body.setAttribute("data-lang",l)})})();
     function toggle(){var t=document.body.getAttribute("data-theme");var n="light"===t?"dark":"light";document.body.setAttribute("data-theme",n);localStorage.setItem("theme",n)}
     function switchLang(){var l=document.body.getAttribute("data-lang");var n="fr"===l?"en":"fr";document.body.setAttribute("data-lang",n);document.documentElement.lang=n;localStorage.setItem("lang",n)}
     </script>
