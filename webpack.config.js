@@ -44,9 +44,6 @@ module.exports = {
           from: path.resolve(__dirname, "src", "favicon.ico"),
         },
         {
-          from: path.resolve(__dirname, "src", "sitemap.xml"),
-        },
-        {
           from: path.resolve(__dirname, "src", "site.webmanifest"),
         },
       ],

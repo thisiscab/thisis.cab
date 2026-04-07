@@ -1,120 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>CAB</title>
-    <link rel="preload" href="main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <!-- <link href="./critical.css" rel="stylesheet"> -->
-    <!-- <link href="./non_critical.css" rel="stylesheet"> -->
-    <link rel="canonical" href="https://thisis.cab/">
-    <meta name="description" content="CAB's personal website">
-    <meta property="og:url" content="https://thisis.cab">
-    <meta property="og:title" content="CAB">
-    <meta property="og:description" content="CAB's personal website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="CAB">
-    <meta property="og:type" content="website">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CAB — Data Engineer</title>
+    <link rel="preload" href="main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="main.css"></noscript>
+    <link rel="canonical" href="https://thisis.cab/">
+    <meta name="description" content="CAB — Data Engineer. Building privacy infrastructure for Canadians. Founder of WIGGWIGG.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta property="og:url" content="https://thisis.cab">
+    <meta property="og:title" content="CAB — Data Engineer">
+    <meta property="og:description" content="Building privacy infrastructure for Canadians. Founder of WIGGWIGG.">
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:locale:alternate" content="en_CA">
+    <meta property="og:site_name" content="thisis.cab">
+    <meta property="og:type" content="website">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.png">
     <script>
-      function toggle() {
-        var t = document.body.getAttribute("data-theme");
-        document.body.setAttribute("data-theme", "light" === t ? "dark" : "light")
-      }
+    (function(){var s=localStorage,t=s.getItem("theme")||"dark",l=s.getItem("lang")||"fr";document.documentElement.lang=l;document.write('<style>[data-lang="fr"] .en,[data-lang="en"] .fr{display:none}</style>');document.addEventListener("DOMContentLoaded",function(){document.body.setAttribute("data-theme",t);document.body.setAttribute("data-lang",l)})})();
+    function toggle(){var t=document.body.getAttribute("data-theme");var n="light"===t?"dark":"light";document.body.setAttribute("data-theme",n);localStorage.setItem("theme",n)}
+    function switchLang(){var l=document.body.getAttribute("data-lang");var n="fr"===l?"en":"fr";document.body.setAttribute("data-lang",n);document.documentElement.lang=n;localStorage.setItem("lang",n)}
     </script>
     <styletag>
         stylecontent
     </styletag>
   </head>
-  <body data-theme="dark">
-    <div class="container">
-      <nav class="nav">
-        <ul class="nav-items">
-          <li class="nav-item">
-            <a href="https://www.github.com/thisiscab">
-              <img src="assets/svg/github.svg" alt="GitHub Logo" width="38px" height="45px" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.linkedin.com/in/thisiscab">
-              <img src="assets/svg/linkedin.svg" alt="LinkedIn Logo" width="45px" height="45px" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.gitlab.com/thisiscab">
-              <img src="assets/svg/gitlab.svg" alt="GitLab Logo" width="48px" height="45px" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a rel="nofollow">
-              <img onclick="toggle()" id="flip-color" src="assets/svg/switch.svg" alt="Switch Theme Color" width="57px" height="45px">
-            </a>
-          </li>
-        </ul>
+  <body data-theme="dark" data-lang="fr">
+    <header>
+      <nav>
+        <a href="https://www.github.com/thisiscab" aria-label="GitHub"><img src="assets/svg/github.svg" alt="" width="22" height="22"></a>
+        <a href="https://www.linkedin.com/in/thisiscab" aria-label="LinkedIn"><img src="assets/svg/linkedin.svg" alt="" width="22" height="22"></a>
+        <a href="https://www.gitlab.com/thisiscab" aria-label="GitLab"><img src="assets/svg/gitlab.svg" alt="" width="22" height="22"></a>
+        <span class="sep"></span>
+        <a class="lang-toggle" role="button" tabindex="0" onclick="switchLang()" onkeydown="event.key==='Enter'&&switchLang()" aria-label="Switch language"><span class="fr">EN</span><span class="en">FR</span></a>
+        <a role="button" tabindex="0" onclick="toggle()" onkeydown="event.key==='Enter'&&toggle()" aria-label="Toggle theme"><img src="assets/svg/switch.svg" alt="" width="20" height="20"></a>
       </nav>
-      <section id="main">
-        <img class="hero-image" src="assets/svg/avatar_reg.svg" alt="CAB's face in cartoon" />
-        <div style="width: 50%">
-            <section id="header">
-                <h1>CAB</h1>
-                <h2>Data Engineer</h2>
-            </section>
-            <section id="previous">
-                <ul>
-                    <li>Currently <a href="https://www.chord.co">@Chord</a>. </li>
-                    <li>Previously <a href="https://www.yaguara.co">@Yaguara</a>, <a href="https://www.twitter.com/glossier">@Glossier</a>, <a href="https://www.twitter.com/dynamomtl">@Dynamo</a>. </li>
-                </ul>
-            </section>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="avatar" src="assets/svg/avatar_reg.svg" alt="CAB" width="300" height="300">
+        <div class="intro">
+          <h1>CAB</h1>
+          <h2>Data Engineer</h2>
+          <p class="tagline fr">Bâtir l'infrastructure de vie privée pour les Canadiens.</p>
+          <p class="tagline en">Building privacy infrastructure for Canadians.</p>
+          <p class="fr">Actuellement <a href="https://wiggwigg.ca">@WIGGWIGG</a><br>
+          Auparavant <a href="https://www.benchsci.com">@BenchSci</a>, <a href="https://www.chord.co">@Chord</a>, <a href="https://www.yaguara.co">@Yaguara</a>, <a href="https://www.twitter.com/glossier">@Glossier</a>, <a href="https://www.twitter.com/dynamomtl">@Dynamo</a></p>
+          <p class="en">Currently <a href="https://wiggwigg.ca">@WIGGWIGG</a><br>
+          Previously <a href="https://www.benchsci.com">@BenchSci</a>, <a href="https://www.chord.co">@Chord</a>, <a href="https://www.yaguara.co">@Yaguara</a>, <a href="https://www.twitter.com/glossier">@Glossier</a>, <a href="https://www.twitter.com/dynamomtl">@Dynamo</a></p>
         </div>
       </section>
 
-      <section id="blog">
-        <a class="blog-btn" href="https://www.medium.com/@thisiscab">
-          <img src="assets/svg/medium.svg" alt="Medium Logo" width="57px" height="32px">
-        </a>
-        <div class="blog-item">
-        <div class="blog-title">
-            <a href="https://medium.com/yaguara-office-hours/what-why-how-and-who-a-story-about-review-apps-95582c7c193a?source=rss-2f96882940------2}">What, Why, How and Who? A story about Review Apps!</a>
+      <section class="now">
+        <div class="section-head">
+          <h3 class="fr">Maintenant</h3>
+          <h3 class="en">Now</h3>
         </div>
-        <span class="blog-company">Yaguara</span>
-        <span class="blog-link">
-            <a href="https://medium.com/yaguara-office-hours/what-why-how-and-who-a-story-about-review-apps-95582c7c193a?source=rss-2f96882940------2">
-            <img class="btn-link-lg color-reverse" src="assets/svg/link.svg" alt="Go To Site" width="30px" height="32px"/>
-            </a>
-        </span>
-        </div>
-        <div class="blog-item">
-        <div class="blog-title">
-            <a href="https://medium.com/yaguara-office-hours/rebuilding-our-infrastructure-from-scratch-with-docker-aws-ecs-datadog-and-terraform-c943b3d8b18d?source=rss-2f96882940------2}">Rebuilding our infrastructure from scratch with Docker, AWS ECS, Datadog and Terraform</a>
-        </div>
-        <span class="blog-company">Yaguara</span>
-        <span class="blog-link">
-            <a href="https://medium.com/yaguara-office-hours/rebuilding-our-infrastructure-from-scratch-with-docker-aws-ecs-datadog-and-terraform-c943b3d8b18d?source=rss-2f96882940------2}">
-            <img class="btn-link-lg color-reverse" src="assets/svg/link.svg" alt="Go To Site" width="30px" height="32px" />
-            </a>
-        </span>
-        </div>
-        <div class="blog-item">
-        <div class="blog-title">
-            <a href="https://medium.com/glossier/how-to-build-a-data-warehouse-our-custom-pipeline-implementation-with-luigi-b52c08e2c654?source=rss-2f96882940------2}">How to Build a Data Warehouse: Our custom pipeline implementation with Luigi</a>
-        </div>
-        <span class="blog-company">Glossier</span>
-        <span class="blog-link">
-            <a href="https://medium.com/glossier/how-to-build-a-data-warehouse-our-custom-pipeline-implementation-with-luigi-b52c08e2c654?source=rss-2f96882940------2}">
-            <img class="btn-link-lg color-reverse" src="assets/svg/link.svg" alt="Go To Site" width="30px" height="32px" />
-            </a>
-        </span>
-        </div>
+        <p class="fr">Je construis <a href="https://wiggwigg.ca">WIGGWIGG</a> — une infrastructure d'identité complète pour les Canadiens. Vie privée d'abord, chiffrement à connaissance nulle, bilingue. Après des années à observer comment les entreprises gèrent les données, j'ai décidé de bâtir l'outil que j'aurais voulu avoir. Pas de capital-risque, pas de compromis — juste du logiciel honnête qui résout un vrai problème.</p>
+        <p class="en">Building <a href="https://wiggwigg.ca">WIGGWIGG</a> — complete identity infrastructure for Canadians. Privacy-first, zero-knowledge, bilingual. After years of watching how companies handle user data, I decided to build the tool I wished existed. No VC, no compromises — just honest software solving a real problem.</p>
       </section>
 
-      <section id="credit">
-          <div> <span>design by <a href="https://www.designk.at/">Kat</a></span>
+      <section class="archive">
+        <div class="section-head">
+          <h3>Archives</h3>
+          <a href="https://www.medium.com/@thisiscab" aria-label="Medium"><img src="assets/svg/medium.svg" alt="" width="32" height="18"></a>
         </div>
+        <article>
+          <span class="num">01</span>
+          <a class="title" href="https://medium.com/yaguara-office-hours/what-why-how-and-who-a-story-about-review-apps-95582c7c193a">What, Why, How and Who? A story about Review Apps!</a>
+          <span class="co">Yaguara</span>
+        </article>
+        <article>
+          <span class="num">02</span>
+          <a class="title" href="https://medium.com/yaguara-office-hours/rebuilding-our-infrastructure-from-scratch-with-docker-aws-ecs-datadog-and-terraform-c943b3d8b18d">Rebuilding our infrastructure from scratch with Docker, AWS ECS, Datadog and Terraform</a>
+          <span class="co">Yaguara</span>
+        </article>
+        <article>
+          <span class="num">03</span>
+          <a class="title" href="https://medium.com/glossier/how-to-build-a-data-warehouse-our-custom-pipeline-implementation-with-luigi-b52c08e2c654">How to Build a Data Warehouse: Our custom pipeline implementation with Luigi</a>
+          <span class="co">Glossier</span>
+        </article>
       </section>
-    </div>
+
+      <section class="contact">
+        <div class="section-head">
+          <h3>Contact</h3>
+        </div>
+        <p><a href="mailto:me@thisis.cab">me@thisis.cab</a></p>
+      </section>
+    </main>
+
+    <footer>thisis.cab</footer>
   </body>
 </html>

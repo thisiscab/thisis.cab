@@ -1,28 +1,22 @@
-a:hover {
-  color: var(--color-hi-rgba);
-  transition-duration: .5s;
-}
+nav a,.lang-toggle,.title{transition:opacity .25s,color .25s}
 
-a img:hover {
-  filter: var(--color-hi-filter);
-  transition-property: filter;
-  transition-duration: .5s;
-}
+nav a:hover{opacity:.6}
+.lang-toggle:hover{color:var(--accent-text)}
+nav a:hover img{filter:var(--accent-f)}
 
-a img.color-reverse:hover {
-  filter: var(--color-filter);
-  transition-property: filter;
-  transition-duration: .5s;
-}
+.intro a:hover,.now a:hover,.contact a:hover{color:var(--text);text-decoration-color:var(--accent)}
 
-@media (hover: none) {
-  a:hover { color: var(--color); }
-  a img:hover { filter: var(--color-filter); }
-  a img.color-reverse:hover { filter: var(--color-hi-filter); }
-}
+.title:hover{color:var(--accent-text)}
 
-/* @media (width <= 500px) { */
-/*     #blog { */
-/*         flex-direction: column; */
-/*     } */
-/* } */
+article{transition:background .2s}
+article:hover{background:var(--card);border-radius:4px}
+
+.section-head a:hover img{filter:var(--accent-f)}
+
+@media(hover:none){
+  nav a:hover{opacity:1}
+  nav a:hover img{filter:var(--icon-f)}
+  .title:hover{color:var(--text)}
+  article:hover{background:transparent}
+  .intro a:hover,.now a:hover,.contact a:hover{color:var(--accent-text)}
+}
